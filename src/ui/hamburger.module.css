@@ -1,4 +1,5 @@
 .hamburger {
+  cursor: pointer;
   height: 1.75rem;
   width: 1.75rem;
   border: none;
