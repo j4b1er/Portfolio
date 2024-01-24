@@ -8,7 +8,7 @@
   background-color: transparent;
   color: var(--color-white);
   border-radius: 10rem;
-  border: 1px solid rgba(var(--color-prtimary-100-rgb), 0.1);
+  border: 1px solid rgba(var(--color-primary-100-rgb), 0.1);
 
   transition: all 0.2s ease-in-out;
 }
@@ -45,7 +45,7 @@
   border-radius: 10rem;
   height: 0px;
   width: 0px;
-  background-color: var(--color-prtimary-300);
+  background-color: var(--color-primary-300);
 
   transition: all 0.2s 0.1s;
 }

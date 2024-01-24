@@ -1,0 +1,11 @@
+.mobileDropdown {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(var(--color-black-rgb), 0.9);
+}
+
+.mobileDropdown__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 0;
+}

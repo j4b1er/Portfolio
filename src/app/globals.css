@@ -47,10 +47,10 @@
   --color-black: #121212;
   --color-black-rgb: 18, 18, 18;
   --color-white: #ebebeb;
-  --color-prtimary-100: #f6eacd;
-  --color-prtimary-100-rgb: 246, 234, 205;
-  --color-prtimary-300: #dfbf5e;
-  --color-prtimary-300-rgb: 223, 191, 94;
+  --color-primary-100: #f6eacd;
+  --color-primary-100-rgb: 246, 234, 205;
+  --color-primary-300: #dfbf5e;
+  --color-primary-300-rgb: 223, 191, 94;
 
   /* Styles for portfolio */
 }

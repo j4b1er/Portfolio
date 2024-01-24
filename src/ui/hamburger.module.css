@@ -1,0 +1,18 @@
+.hamburger {
+  height: 1.75rem;
+  width: 1.75rem;
+  border: none;
+
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+
+  background-color: transparent;
+}
+
+.hamburger__span {
+  width: 100%;
+  height: 0.25rem;
+  border-radius: 10rem;
+  background-color: var(--color-white);
+}

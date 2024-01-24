@@ -1,0 +1,15 @@
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo:hover .logo__svg {
+  fill: var(--color-prtimary-300);
+}
+
+.logo__svg {
+  transition: all 0.2s ease-in-out;
+
+  height: 2rem;
+  fill: var(--color-white);
+}
