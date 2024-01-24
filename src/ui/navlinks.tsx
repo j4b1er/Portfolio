@@ -1,4 +1,3 @@
-import Button from "./button";
 import styles from "./navbar.module.css";
 
 export default function NavLinks() {
@@ -26,7 +25,6 @@ export default function NavLinks() {
           </a>
         </li>
       </ul>
-      <Button />
     </>
   );
 }
