@@ -1,0 +1,14 @@
+.gridItem {
+  padding: 2rem;
+
+  background-color: rgba(var(--color-primary-100-rgb), 0.1);
+  backdrop-filter: blur(16px);
+
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(var(--color-primary-100-rgb), 0.1);
+}
+
+/* later on change to grid-template-areas */
+.aboutMe {
+  grid-area: span 2 / span 3;
+}

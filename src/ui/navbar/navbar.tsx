@@ -1,10 +1,10 @@
 "use client";
 
 import NavLinks from "./navlinks";
-import Button from "./button";
+import Button from "../buttons/button";
 
 import styles from "./navbar.module.css";
-import Logo from "./logo";
+import Logo from "../logos/logo";
 import MobileDropdown from "./mobilemenu";
 import Hammburger from "./hamburger";
 import { useState } from "react";
@@ -25,9 +25,9 @@ export default function Navbar() {
           <NavLinks />
           <Button />
         </div>
-        <Hammburger onOpenHandler={setOpenHandler} />
+        <Hammburger onOpenHandler={setOpenHandler} isOpen={isOpen} />
       </div>
-      {isOpen && <MobileDropdown />}
+      {isOpen && <MobileDropdown data-visible={`${isOpen}`} />}
     </nav>
   );
 }

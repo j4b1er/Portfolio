@@ -12,32 +12,35 @@
 }
 
 .hamburger__span {
+  display: block;
   width: 100%;
   height: 0.125rem;
-  border-radius: 10rem;
+  border-radius: 1px;
   background-color: var(--color-white);
 
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
-.hamburger:hover .hamburger__span:first-child {
+.hamburger__span:first-child {
+  transform-origin: right top;
+}
+
+.hamburger__span:last-child {
+  transform-origin: right bottom;
+}
+
+.hamburger[aria-expanded="true"] .hamburger__span:first-child {
   transform: rotate(-45deg);
-  transform-origin: center right;
 }
 
-.hamburger:hover .hamburger__span:nth-child(2) {
+.hamburger[aria-expanded="true"] .hamburger__span:nth-child(2) {
   transform: translateX(16px);
   opacity: 0;
 }
 
-.hamburger:hover .hamburger__span:last-child {
+.hamburger[aria-expanded="true"] .hamburger__span:last-child {
   transform: rotate(45deg);
-  transform-origin: center right;
 }
-
-/* .hamburger__span {
-
-} */
 
 @media screen and (min-width: 600px) {
   .hamburger {
