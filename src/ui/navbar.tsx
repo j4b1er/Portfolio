@@ -7,8 +7,15 @@ import styles from "./navbar.module.css";
 import Logo from "./logo";
 import MobileDropdown from "./mobilemenu";
 import Hammburger from "./hamburger";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const setOpenHandler = () => {
+    setIsOpen((value) => !value);
+  };
+
   return (
     // <nav className={`${styles.mainNavbar} ${roboto.variable}`}>
     <nav className={styles.mainNavbar}>
@@ -18,9 +25,9 @@ export default function Navbar() {
           <NavLinks />
           <Button />
         </div>
-        <Hammburger />
+        <Hammburger onOpenHandler={setOpenHandler} />
       </div>
-      <MobileDropdown />
+      {isOpen && <MobileDropdown />}
     </nav>
   );
 }

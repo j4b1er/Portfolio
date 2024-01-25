@@ -4,7 +4,7 @@
 }
 
 .logo:hover .logo__svg {
-  fill: var(--color-prtimary-300);
+  fill: var(--color-primary-300);
 }
 
 .logo__svg {
