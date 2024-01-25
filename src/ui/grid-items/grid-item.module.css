@@ -10,5 +10,18 @@
 
 /* later on change to grid-template-areas */
 .aboutMe {
-  grid-area: span 2 / span 3;
+  grid-area: about;
+}
+
+.colorTheme {
+  grid-area: theme;
+
+  min-width: 260px;
+}
+
+.myLocation {
+  grid-area: location;
+
+  min-width: 260px;
+  background-color: var(--color-secondary-300);
 }
