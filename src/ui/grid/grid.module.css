@@ -13,7 +13,10 @@
     "about"
     "about"
     "theme"
-    "location";
+    "location"
+    "projects"
+    "projects"
+    "skills";
 }
 
 @media only screen and (min-width: 600px) {
@@ -21,6 +24,9 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
       "about about about theme"
-      "about about about location";
+      "about about about location"
+      "projects projects projects projects"
+      "projects projects projects projects"
+      "skills skills skills skills";
   }
 }

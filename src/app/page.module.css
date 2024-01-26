@@ -8,7 +8,7 @@
       rgba(var(--color-black-rgb), 1) 75%
     ),
     radial-gradient(
-      570px at 30% 20%,
+      570px at 30% 50%,
       rgba(var(--color-primary-300-rgb), 0.4),
       transparent
     ),

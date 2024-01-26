@@ -1,5 +1,5 @@
 .gridItem {
-  padding: 2rem;
+  padding: 1rem;
 
   background-color: rgba(var(--color-primary-100-rgb), 0.1);
   backdrop-filter: blur(16px);
@@ -24,4 +24,18 @@
 
   min-width: 260px;
   background-color: var(--color-secondary-300);
+}
+
+.projects {
+  grid-area: projects;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+@media only screen and (min-width: 600px) {
+  .gridItem {
+    padding: 2rem;
+  }
 }
