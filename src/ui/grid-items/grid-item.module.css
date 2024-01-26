@@ -8,7 +8,26 @@
   border: 1px solid rgba(var(--color-primary-100-rgb), 0.1);
 }
 
-/* later on change to grid-template-areas */
+/* Flex for the item to hold in a column flow a header and a content */
+.flexContainer {
+  height: 100%;
+  overflow: hidden;
+
+  display: flex;
+  gap: 1rem;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+/* Grid for the item to hold header content and aside */
+.gridContainer {
+  height: 100%;
+  overflow: hidden;
+
+  display: grid;
+  gap: 1rem;
+}
+
 .aboutMe {
   grid-area: about;
 }
@@ -17,6 +36,23 @@
   grid-area: theme;
 
   min-width: 260px;
+}
+
+.colorTheme__header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.colorTheme__header h3 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.colorTheme__content {
+  height: 100%;
+  width: 100%;
+  background-color: red;
 }
 
 .myLocation {
