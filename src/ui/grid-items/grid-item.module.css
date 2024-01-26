@@ -28,32 +28,46 @@
   gap: 1rem;
 }
 
-.aboutMe {
-  grid-area: about;
-}
-
-.colorTheme {
-  grid-area: theme;
-
-  min-width: 260px;
-}
-
-.colorTheme__header {
+.gridItem__header {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
-.colorTheme__header h3 {
+.gridItem__header h3 {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.125rem;
+  line-height: 110%;
+}
+
+/* Styles for Select about me component */
+.aboutMe {
+  grid-area: about;
+}
+/* Styles for Select about me component */
+
+/* Styles for Select theme component */
+.colorTheme {
+  grid-area: theme;
+
+  position: relative;
+  min-width: 260px;
 }
 
 .colorTheme__content {
-  height: 100%;
-  width: 100%;
-  background-color: red;
+  display: flex;
+  gap: 1rem;
+  flex-flow: column nowrap;
+  align-items: center;
 }
+
+.colorTheme__content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(var(--color-white-rgb), 0.5);
+}
+
+/* Styles for Select theme component */
 
 .myLocation {
   grid-area: location;
