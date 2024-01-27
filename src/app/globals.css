@@ -1,19 +1,4 @@
 :root {
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  /* Styles for portfolio */
-
   --max-width: 1088px;
   --navbar-height: 4rem;
   --border-radius: 1rem;
@@ -21,24 +6,18 @@
   --color-black: #121212;
   --color-black-rgb: 18, 18, 18;
   --color-white: #ebebeb;
+  --color-white-rgb: 235, 235, 235;
   --color-primary-100: #f6eacd;
   --color-primary-100-rgb: 246, 234, 205;
   --color-primary-300: #dfbf5e;
   --color-primary-300-rgb: 223, 191, 94;
 
-  /* Styles for portfolio */
+  --color-secondary-300: #c6d4d4;
+  --color-secondary-300-rgb: 198, 212, 212;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
     --color-black: #121212;
     --color-black-rgb: 18, 18, 18;
     --color-white: #ebebeb;
@@ -51,6 +30,20 @@
     --color-secondary-300: #c6d4d4;
     --color-secondary-300-rgb: 198, 212, 212;
   }
+} */
+
+[data-theme="dark"] {
+  --color-black: #121212;
+  --color-black-rgb: 18, 18, 18;
+  --color-white: #ebebeb;
+  --color-white-rgb: 235, 235, 235;
+  --color-primary-100: #f6eacd;
+  --color-primary-100-rgb: 246, 234, 205;
+  --color-primary-300: #dfbf5e;
+  --color-primary-300-rgb: 223, 191, 94;
+
+  --color-secondary-300: #c6d4d4;
+  --color-secondary-300-rgb: 198, 212, 212;
 }
 
 * {

@@ -44,7 +44,6 @@
 .aboutMe {
   grid-area: about;
 }
-/* Styles for Select about me component */
 
 /* Styles for Select theme component */
 .colorTheme {
@@ -82,8 +81,8 @@
   border-radius: 100rem;
   z-index: -1;
 }
-/* Styles for Select theme component */
 
+/* Styles for My Location theme component */
 .myLocation {
   grid-area: location;
 
@@ -91,10 +90,12 @@
   background-color: var(--color-secondary-300);
 }
 
+/* Styles for Projects theme component */
 .projects {
   grid-area: projects;
 }
 
+/* Styles for Skills theme component */
 .skills {
   grid-area: skills;
 }

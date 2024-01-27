@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { roboto } from "@/ui/fonts";
 import "./globals.css";
 import Navbar from "@/ui/navbar/navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Javier Pardo",
@@ -14,12 +15,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={roboto.className}>
-        <header>
-          <Navbar />
-        </header>
-        {children}
+        <ThemeProvider
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange>
+          <header>
+            <Navbar />
+          </header>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,6 +1,17 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import styles from "@/ui/grid-items/grid-item.module.css";
+import { useTheme } from "next-themes";
 
 export default function ColorTheme() {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <div className={`${styles.gridItem} ${styles.colorTheme}`}>
       <div className={`${styles.flexContainer}`}>
@@ -22,6 +33,8 @@ export default function ColorTheme() {
                 id="light"
                 name="theme"
                 value="light"
+                // checked={lightTheme}
+                onClick={() => setTheme("light")}
               />
               <label
                 className="radioButtonContainer__group___label"
@@ -36,7 +49,8 @@ export default function ColorTheme() {
                 id="dark"
                 name="theme"
                 value="dark"
-                defaultChecked
+                // checked={darkTheme}
+                onClick={() => setTheme("dark")}
               />
               <label
                 className="radioButtonContainer__group___label"
