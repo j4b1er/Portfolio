@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={roboto.className}>
         <ThemeProvider
           defaultTheme="system"
-          enableSystem
+          attribute="data-theme"
           disableTransitionOnChange>
           <header>
             <Navbar />

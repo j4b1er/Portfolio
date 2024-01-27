@@ -5,7 +5,7 @@
   backdrop-filter: blur(16px);
 
   border-radius: var(--border-radius);
-  border: 1px solid rgba(var(--color-primary-100-rgb), 0.1);
+  border: 1px solid rgba(var(--color-white-rgb), 0.1);
 }
 
 /* Flex for the item to hold in a column flow a header and a content */
@@ -64,7 +64,7 @@
 .colorTheme__content p {
   font-size: 1rem;
   font-weight: 300;
-  color: rgba(var(--color-white-rgb), 0.5);
+  color: rgba(var(--color-white-rgb), 0.8);
 }
 
 .colorTheme__MoonSun {
@@ -73,11 +73,7 @@
   right: -48px;
   width: 192px;
   height: 192px;
-  background: linear-gradient(
-    45deg,
-    rgba(var(--color-secondary-300-rgb), 0.1) 30%,
-    var(--color-secondary-300)
-  );
+  background: var(--moon-sun-background);
   border-radius: 100rem;
   z-index: -1;
 }

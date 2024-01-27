@@ -12,6 +12,14 @@ export default function ColorTheme() {
     setMounted(true);
   }, []);
 
+  // if (!mounted) {
+  //   return (
+  //     <div className={`${styles.gridItem} ${styles.colorTheme}`}>
+  //       Loading...
+  //     </div>
+  //   );
+  // }
+
   return (
     <div className={`${styles.gridItem} ${styles.colorTheme}`}>
       <div className={`${styles.flexContainer}`}>
@@ -26,38 +34,44 @@ export default function ColorTheme() {
         <div className={`${styles.colorTheme__content}`}>
           <p>Choose a theme</p>
           <div className="radioButtonContainer">
-            <div className="radioButtonContainer__group">
-              <input
-                className="radioButtonContainer__group___radio"
-                type="radio"
-                id="light"
-                name="theme"
-                value="light"
-                // checked={lightTheme}
-                onClick={() => setTheme("light")}
-              />
-              <label
-                className="radioButtonContainer__group___label"
-                htmlFor="light">
-                Light
-              </label>
-            </div>
-            <div className="radioButtonContainer__group">
-              <input
-                className="radioButtonContainer__group___radio"
-                type="radio"
-                id="dark"
-                name="theme"
-                value="dark"
-                // checked={darkTheme}
-                onClick={() => setTheme("dark")}
-              />
-              <label
-                className="radioButtonContainer__group___label"
-                htmlFor="dark">
-                Dark
-              </label>
-            </div>
+            {!mounted ? (
+              <div className="radioButtonContainer__skeleton"></div>
+            ) : (
+              <>
+                <div className="radioButtonContainer__group">
+                  <input
+                    className="radioButtonContainer__group___radio"
+                    type="radio"
+                    id="light"
+                    name="theme"
+                    value="light"
+                    checked={theme === "light"}
+                    onChange={() => setTheme("light")}
+                  />
+                  <label
+                    className="radioButtonContainer__group___label"
+                    htmlFor="light">
+                    Light
+                  </label>
+                </div>
+                <div className="radioButtonContainer__group">
+                  <input
+                    className="radioButtonContainer__group___radio"
+                    type="radio"
+                    id="dark"
+                    name="theme"
+                    value="dark"
+                    checked={theme === "dark"}
+                    onChange={() => setTheme("dark")}
+                  />
+                  <label
+                    className="radioButtonContainer__group___label"
+                    htmlFor="dark">
+                    Dark
+                  </label>
+                </div>
+              </>
+            )}
           </div>
         </div>
         <div className={`${styles.colorTheme__MoonSun}`}></div>

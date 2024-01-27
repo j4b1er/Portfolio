@@ -2,9 +2,9 @@
   position: fixed;
   width: 100%;
   height: var(--navbar-height);
-  border-bottom: 1px solid rgba(var(--color-primary-100-rgb), 0.1);
+  border-bottom: 1px solid rgba(var(--color-white-rgb), 0.1);
 
-  background-color: rgba(var(--color-black-rgb), 0.4);
+  background-color: rgba(var(--navbar-background-color), 0.4);
   backdrop-filter: blur(10px);
 
   /* font-family: var(--font-roboto); */
@@ -58,8 +58,8 @@
 
 @media (hover: hover) and (pointer: fine) {
   .mainNavbar__container___link:hover {
-    background-color: var(--color-primary-100);
-    color: var(--color-black);
+    background-color: var(--navbar-button-bg-hover);
+    color: var(--button-hover-color);
   }
 }
 
