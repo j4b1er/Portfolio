@@ -52,6 +52,7 @@
 
   position: relative;
   min-width: 260px;
+  overflow: hidden;
 }
 
 .colorTheme__content {
@@ -67,6 +68,20 @@
   color: rgba(var(--color-white-rgb), 0.5);
 }
 
+.colorTheme__MoonSun {
+  position: absolute;
+  top: -47px;
+  right: -48px;
+  width: 192px;
+  height: 192px;
+  background: linear-gradient(
+    45deg,
+    rgba(var(--color-secondary-300-rgb), 0.1) 30%,
+    var(--color-secondary-300)
+  );
+  border-radius: 100rem;
+  z-index: -1;
+}
 /* Styles for Select theme component */
 
 .myLocation {

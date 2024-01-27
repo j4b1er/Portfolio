@@ -23,7 +23,11 @@ export default function ColorTheme() {
                 name="theme"
                 value="light"
               />
-              <label htmlFor="light">Light</label>
+              <label
+                className="radioButtonContainer__group___label"
+                htmlFor="light">
+                Light
+              </label>
             </div>
             <div className="radioButtonContainer__group">
               <input
@@ -32,11 +36,17 @@ export default function ColorTheme() {
                 id="dark"
                 name="theme"
                 value="dark"
+                defaultChecked
               />
-              <label htmlFor="dark">Dark</label>
+              <label
+                className="radioButtonContainer__group___label"
+                htmlFor="dark">
+                Dark
+              </label>
             </div>
           </div>
         </div>
+        <div className={`${styles.colorTheme__MoonSun}`}></div>
       </div>
     </div>
   );

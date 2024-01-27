@@ -97,7 +97,6 @@ a {
 
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
 
   border-radius: 100rem;
   border: 1px solid rgba(var(--color-white-rgb), 0.1);
@@ -111,20 +110,21 @@ a {
   align-items: center;
 }
 
-input[type="radio"] {
+.radioButtonContainer__group___radio {
   -webkit-appearance: none;
   appearance: none;
   background-color: #fff;
   margin: 0;
 }
 
-input[type="radio"]:checked ~ label {
+.radioButtonContainer__group___radio:checked
+  ~ .radioButtonContainer__group___label {
   background-color: var(--color-primary-300);
   color: var(--color-black);
   font-weight: 500;
 }
 
-label {
+.radioButtonContainer__group___label {
   cursor: pointer;
   width: 100%;
   height: 100%;
