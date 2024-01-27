@@ -27,7 +27,7 @@ export default function Navbar() {
         </div>
         <Hammburger onOpenHandler={setOpenHandler} isOpen={isOpen} />
       </div>
-      {isOpen && <MobileDropdown data-visible={`${isOpen}`} />}
+      {isOpen && <MobileDropdown dataVisible={isOpen} />}
     </nav>
   );
 }

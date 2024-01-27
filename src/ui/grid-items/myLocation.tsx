@@ -1,6 +1,16 @@
 import styles from "@/ui/grid-items/grid-item.module.css";
 
-export default function MyLocation() {
+const url = `https://api.openweathermap.org/data/2.5/weather?zip=20886,us&units=imperial&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}`;
+
+async function getData() {
+  const res = await fetch(url);
+
+  return res.json();
+}
+
+export default async function MyLocation() {
+  const { main, clouds, sys, name } = await getData();
+
   return (
     <div className={`${styles.gridItem} ${styles.myLocation}`}>
       <div className={`${styles.flexContainer}`}>
@@ -13,7 +23,8 @@ export default function MyLocation() {
           <h3>My Location</h3>
         </div>
         <div className={`${styles.colorTheme__content}`}>
-          <p>Choose a theme</p>
+          <p>{Math.floor(main.temp)}°</p>
+          <p>{name}, MD</p>
         </div>
       </div>
     </div>

@@ -4,11 +4,15 @@
   height: var(--navbar-height);
   border-bottom: 1px solid rgba(var(--color-white-rgb), 0.1);
 
-  background-color: rgba(var(--navbar-background-color), 0.4);
+  background-color: var(--navbar-background-color);
   backdrop-filter: blur(10px);
 
   /* font-family: var(--font-roboto); */
   z-index: 9999;
+}
+
+.mainNavbar:has([data-visible="true"]) {
+  background-color: var(--color-black);
 }
 
 .mainNavbar__container {
