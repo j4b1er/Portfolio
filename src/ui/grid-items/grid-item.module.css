@@ -14,7 +14,7 @@
   overflow: hidden;
 
   display: flex;
-  gap: 1rem;
+  /* gap: 1rem; */
   flex-flow: column nowrap;
   justify-content: space-between;
 }
@@ -84,6 +84,55 @@
 
   min-width: 260px;
   background-color: var(--color-secondary-300);
+}
+
+.myLocation__tempCity {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.myLocation__tempCity___temp {
+  font-size: 4rem;
+  font-weight: 500;
+  color: #121212;
+}
+
+.myLocation__tempCity___city {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(18, 18, 18, 0.6);
+}
+
+.myLocation__extraInfo {
+  background-color: #ebebeb;
+  border-radius: calc(var(--border-radius) / 2);
+  height: 50px;
+  width: 196px;
+  padding: 0.5rem 1rem;
+
+  align-self: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.myLocation__extraInfo___details {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.myLocation__extraInfo___details p {
+  font-size: 1rem;
+  color: #121212;
+}
+
+.myLocation__extraInfo___details p:last-child {
+  font-size: 1rem;
+  color: #121212;
+  opacity: 0.6;
 }
 
 /* Styles for Projects theme component */

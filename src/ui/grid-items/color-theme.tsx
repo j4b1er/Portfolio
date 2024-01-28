@@ -12,14 +12,6 @@ export default function ColorTheme() {
     setMounted(true);
   }, []);
 
-  // if (!mounted) {
-  //   return (
-  //     <div className={`${styles.gridItem} ${styles.colorTheme}`}>
-  //       Loading...
-  //     </div>
-  //   );
-  // }
-
   return (
     <div className={`${styles.gridItem} ${styles.colorTheme}`}>
       <div className={`${styles.flexContainer}`}>
