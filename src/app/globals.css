@@ -3,7 +3,7 @@
   --navbar-height: 4rem;
   --border-radius: 1rem;
   --button-hover-color: #121212;
-  --navbar-background-color: rgba(var(var(--color-white-rgb)), 0.4);
+  --navbar-background-color: rgba(var(--color-black-rgb), 0.8);
   --navbar-button-bg-hover: #dfbf5e;
   --moon-sun-background: linear-gradient(
     45deg,
@@ -26,7 +26,7 @@
 }
 
 [data-theme="dark"] {
-  --navbar-background-color: rgba(var(var(--color-black-rgb)), 0.4);
+  --navbar-background-color: rgba(var(--color-black-rgb), 0.8);
   --moon-sun-background: linear-gradient(
     45deg,
     rgba(var(--color-secondary-300-rgb), 0.1) 30%,

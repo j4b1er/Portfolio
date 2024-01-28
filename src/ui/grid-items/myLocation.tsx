@@ -3,15 +3,19 @@ import styles from "@/ui/grid-items/grid-item.module.css";
 const url = `https://api.openweathermap.org/data/2.5/weather?zip=20886,us&units=imperial&appid=${process.env.NEXT_PUBLIC_WEATHER_KEY}`;
 
 async function getData() {
-  const res = await fetch(url, { next: { revalidate: false } });
+  const res = await fetch(url, { next: { revalidate: 5 } });
   return res.json();
 }
 
 export default async function MyLocation() {
   const { weather, main, clouds, sys, name } = await getData();
+  // const dayNight = weather[0].icon.split("")[2] === "d" ? "day" : "night";
+  const dayNight = "night";
 
   return (
-    <div className={`${styles.gridItem} ${styles.myLocation}`}>
+    <div
+      className={`${styles.gridItem} ${styles.myLocation}`}
+      data-time={dayNight}>
       <div className={`${styles.flexContainer}`}>
         <div className={`${styles.gridItem__header}`}>
           <div className="componentIcon">
