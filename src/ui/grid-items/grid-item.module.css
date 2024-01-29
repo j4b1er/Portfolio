@@ -80,6 +80,9 @@
 
 /* Styles for My Location theme component */
 .myLocation {
+  position: relative;
+  overflow: hidden;
+
   grid-area: location;
 
   min-width: 260px;
@@ -88,6 +91,13 @@
   --weather-text-color: #ebebeb;
   --weather-text-color-rgb: 235, 235, 235;
   --weather-bg-color: #121212;
+  --weather-moon-sun-background: linear-gradient(
+    45deg,
+    rgba(var(--color-secondary-300-rgb), 0.1) 30%,
+    var(--color-secondary-300)
+  );
+  --weather-cloud-top-bg: #7c7c7c;
+  --weather-cloud-bottom-bg: #535353;
 }
 
 .myLocation[data-time="day"] {
@@ -96,6 +106,14 @@
   --weather-text-color: #121212;
   --weather-text-color-rgb: 18, 18, 18;
   --weather-bg-color: #ebebeb;
+
+  --weather-moon-sun-background: linear-gradient(
+    90deg,
+    rgba(223, 191, 94, 0.1),
+    #dfbf5e 80%
+  );
+  --weather-cloud-top-bg: #ebebeb;
+  --weather-cloud-bottom-bg: #c0c0c0;
 }
 
 .myLocation .gridItem__header h3 {
@@ -150,6 +168,55 @@
 .myLocation__extraInfo___details p:last-child {
   font-size: 1rem;
   color: rgba(var(--weather-text-color-rgb), 0.6);
+}
+
+.myLocation__MoonSun {
+  position: absolute;
+  top: -47px;
+  left: -48px;
+  width: 192px;
+  height: 192px;
+  background: var(--weather-moon-sun-background);
+  border-radius: 100rem;
+  z-index: -1;
+}
+
+.myLocation__LeftCloud {
+  position: absolute;
+  top: 40px;
+  left: -150px;
+
+  width: 150px;
+  height: 100px;
+
+  z-index: -1;
+}
+
+.myLocation__LeftCloud svg {
+  fill: url(#gradient);
+}
+
+.myLocation__RightCloud {
+  position: absolute;
+  top: 20px;
+  right: -150px;
+
+  width: 150px;
+  height: 100px;
+
+  z-index: -1;
+}
+
+.myLocation__RightCloud svg {
+  fill: url(#gradient);
+}
+
+.myLocation__LeftCloud___topGradient {
+  stop-color: var(--weather-cloud-top-bg);
+}
+
+.myLocation__LeftCloud___bottomGradient {
+  stop-color: var(--weather-cloud-bottom-bg);
 }
 
 /* Styles for Projects theme component */
