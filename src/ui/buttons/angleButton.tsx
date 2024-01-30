@@ -1,7 +1,7 @@
+import styles from "@/ui/buttons/angleButton.module.css";
 import { ReactNode } from "react";
-import styles from "./button.module.css";
 
-export default function Button({
+export default function AngleButton({
   children,
   href,
 }: {
@@ -9,7 +9,7 @@ export default function Button({
   href: string;
 }) {
   return (
-    <a href={href} className={styles.btn}>
+    <a href={href} className={styles.leftButton}>
       {children}
     </a>
   );

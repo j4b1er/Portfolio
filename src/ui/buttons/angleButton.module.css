@@ -1,0 +1,64 @@
+.leftButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 40px;
+  width: 40px;
+
+  text-decoration: none;
+
+  border-radius: 100rem;
+  background-color: #121212;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.leftButton svg {
+  height: 1rem;
+  fill: #ebebeb;
+
+  transform: rotate(-45deg);
+}
+
+@keyframes angle-translate {
+  0% {
+    transform: rotate(-45deg) translateX(0px);
+    opacity: 1;
+  }
+
+  45% {
+    transform: rotate(-45deg) translateX(30px);
+    opacity: 1;
+  }
+
+  50% {
+    transform: rotate(-45deg) translateX(30px);
+    opacity: 0;
+  }
+
+  55% {
+    transform: rotate(-45deg) translateX(-30px);
+    opacity: 0;
+  }
+
+  60% {
+    transform: rotate(-45deg) translateX(-30px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(-45deg) translateX(0px);
+    opacity: 1;
+  }
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .leftButton:hover svg {
+    animation: angle-translate 0.3s ease-in-out;
+  }
+}

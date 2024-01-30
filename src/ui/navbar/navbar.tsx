@@ -23,7 +23,9 @@ export default function Navbar() {
         <Logo />
         <div className={styles.mainNavbar__desktopNavbar}>
           <NavLinks />
-          <Button />
+          <Button href={"#"}>
+            <span>Contact</span>
+          </Button>
         </div>
         <Hammburger onOpenHandler={setOpenHandler} isOpen={isOpen} />
       </div>
