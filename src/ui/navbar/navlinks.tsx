@@ -4,17 +4,17 @@ export default function NavLinks() {
   return (
     <ul className={styles.mainNavbar__container___ul}>
       <li>
-        <a href="#" className={styles.mainNavbar__container___link}>
+        <a href="/" className={styles.mainNavbar__container___link}>
           Home
         </a>
       </li>
       <li>
-        <a href="#" className={styles.mainNavbar__container___link}>
+        <a href="#projects" className={styles.mainNavbar__container___link}>
           Projects
         </a>
       </li>
       <li>
-        <a href="#" className={styles.mainNavbar__container___link}>
+        <a href="#skills" className={styles.mainNavbar__container___link}>
           Skills
         </a>
       </li>

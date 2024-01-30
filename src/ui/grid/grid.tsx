@@ -2,8 +2,9 @@ import styles from "@/ui/grid/grid.module.css";
 import AboutMe from "../grid-items/aboutme";
 import ColorTheme from "../grid-items/color-theme";
 import MyLocation from "../grid-items/myLocation";
-import Projects from "@/ui/grid-items/projects";
+import ProjectGlor from "@/ui/grid-items/projectsGlor";
 import Skills from "../grid-items/skills";
+import ProjectDZ from "../grid-items/projectsDz";
 
 export default function Grid() {
   return (
@@ -11,7 +12,8 @@ export default function Grid() {
       <AboutMe />
       <ColorTheme />
       <MyLocation />
-      <Projects />
+      <ProjectGlor />
+      <ProjectDZ />
       <Skills />
     </div>
   );

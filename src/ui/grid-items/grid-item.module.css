@@ -29,6 +29,8 @@
 }
 
 .gridItem__header {
+  position: relative;
+
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -286,13 +288,23 @@
 }
 
 /* Styles for Projects theme component */
-.projects {
-  grid-area: projects;
+.projectGlor {
+  grid-area: project1;
+
+  scroll-margin-top: calc(var(--navbar-height) + 1rem);
+
+  background-color: #a3e81b;
+}
+
+.projectDz {
+  grid-area: project2;
 }
 
 /* Styles for Skills theme component */
 .skills {
   grid-area: skills;
+
+  scroll-margin-top: calc(var(--navbar-height) + 1rem);
 }
 
 @media only screen and (min-width: 600px) {
