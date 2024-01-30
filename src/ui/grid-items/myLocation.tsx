@@ -8,54 +8,72 @@ const weatherConditions = [
     iconnight: "01n",
     sunmoon: true,
     pos: "",
+    effect: "",
+    intensity: 0,
   },
   {
     iconday: "02d",
     iconnight: "02n",
     sunmoon: true,
     pos: "-100px",
+    effect: "",
+    intensity: 0,
   },
   {
     iconday: "03d",
     iconnight: "03n",
     sunmoon: true,
     pos: "-40px",
+    effect: "",
+    intensity: 0,
   },
   {
     iconday: "04d",
     iconnight: "04n",
     sunmoon: false,
     pos: "-10px",
+    effect: "",
+    intensity: 0,
   },
   {
     iconday: "09d",
     iconnight: "09n",
     sunmoon: false,
     pos: "-10px",
+    effect: "rain",
+    intensity: 15,
   },
   {
     iconday: "10d",
     iconnight: "10n",
     sunmoon: true,
     pos: "-40px",
+    effect: "rain",
+    intensity: 10,
   },
   {
     iconday: "11d",
     iconnight: "11n",
     sunmoon: false,
     pos: "-10px",
+    effect: "rain",
+    intensity: 20,
   },
   {
     iconday: "13d",
     iconnight: "13n",
     sunmoon: false,
     pos: "-10px",
+    effect: "snow",
+    intensity: 20,
   },
   {
     iconday: "50d",
     iconnight: "50n",
     sunmoon: false,
     pos: "-10px",
+    effect: "",
+    intensity: 0,
   },
 ];
 
@@ -66,9 +84,14 @@ async function getWeatherData() {
 
 export default async function MyLocation() {
   const { weather, main, wind, clouds, sys, name } = await getWeatherData();
-  const dayNight = weather[0].icon.split("")[2] === "d" ? "day" : "night";
-  // const dayNight = "night";
-  const { sunmoon, pos } = weatherConditions.filter(
+  let dayNight =
+    weather[0].icon.split("")[2] === "n" ||
+    weather[0].icon === "10d" ||
+    weather[0].icon === "11d"
+      ? "night"
+      : "day";
+
+  const { sunmoon, pos, effect, intensity } = weatherConditions.filter(
     (condition) =>
       condition.iconday === weather[0].icon ||
       condition.iconnight === weather[0].icon
@@ -110,7 +133,23 @@ export default async function MyLocation() {
           </div>
         </div>
       </div>
+
       {sunmoon && <div className={styles.myLocation__MoonSun}></div>}
+
+      {intensity !== 0 && (
+        <div className={styles.myLocation__effectContainer}>
+          {Array.from({ length: intensity }, (_, i) => (
+            <div
+              className={effect === "rain" ? styles.drop : styles.flakes}
+              key={i}
+              style={{
+                left: `${(i + 1) * (100 / intensity)}%`,
+                animationDelay: `${Math.random() * (4 - 0.5) + 0.5}s`,
+              }}></div>
+          ))}
+        </div>
+      )}
+
       <div className={styles.myLocation__LeftCloud} style={{ left: pos }}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
           <defs>

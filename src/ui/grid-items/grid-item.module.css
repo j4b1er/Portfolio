@@ -86,6 +86,9 @@
   grid-area: location;
 
   min-width: 260px;
+}
+
+.myLocation[data-time="night"] {
   background-color: #434343;
 
   --weather-text-color: #ebebeb;
@@ -106,7 +109,6 @@
   --weather-text-color: #121212;
   --weather-text-color-rgb: 18, 18, 18;
   --weather-bg-color: #ebebeb;
-
   --weather-moon-sun-background: linear-gradient(
     90deg,
     rgba(223, 191, 94, 0.1),
@@ -217,6 +219,70 @@
 
 .myLocation__LeftCloud___bottomGradient {
   stop-color: var(--weather-cloud-bottom-bg);
+}
+
+.myLocation__effectContainer {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.myLocation__effectContainer .drop {
+  position: absolute;
+  opacity: 0;
+  height: 1rem;
+  width: 2px;
+  border-radius: 1px;
+  background: linear-gradient(to bottom, transparent, #ebebeb);
+  animation: rain-animation 0.3s linear infinite;
+  z-index: -1;
+}
+
+.myLocation__effectContainer .flakes {
+  position: absolute;
+  opacity: 0;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 100rem;
+  background-color: #ebebeb;
+  animation: snow-animation 1.5s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rain-animation {
+  0% {
+    transform: translate(0%, 0%) rotate(5deg);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-1200%, 1500%) rotate(5deg);
+    opacity: 0;
+  }
+}
+
+@keyframes snow-animation {
+  0% {
+    transform: translate(0%, 0%);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(0%, 2000%);
+    opacity: 0;
+  }
 }
 
 /* Styles for Projects theme component */
