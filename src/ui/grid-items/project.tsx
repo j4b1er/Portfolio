@@ -1,12 +1,29 @@
 import styles from "@/ui/grid-items/grid-item.module.css";
-import AngleButton from "../buttons/angleButton";
-import bgImage from "../../../public/projects-ss/glor.jpg";
 import SimpleButton from "../buttons/simpleButton";
+import AngleButton from "../buttons/angleButton";
+import { CSSProperties } from "react";
 
-export default function ProjectGlor() {
+export default function Project({ ProjectData }: { ProjectData: Object }) {
+  const {
+    name,
+    description,
+    stylesCSS,
+    liveUrl,
+    technologies,
+    sourceUrl,
+    imgScreenShot,
+  }: {
+    name: string;
+    description: string;
+    stylesCSS: CSSProperties;
+    liveUrl: String;
+    technologies: Array<String>;
+    sourceUrl: String;
+    imgScreenShot: String;
+  } = ProjectData;
+
   return (
-    <div
-      className={`${styles.gridItem} ${styles.projects} ${styles.projectGlor}`}>
+    <div className={`${styles.gridItem} ${styles.projects}`}>
       <div
         className={`${styles.flexContainer}`}
         style={{ justifyContent: "flex-start", gap: "1.5rem", height: "auto" }}>
@@ -25,8 +42,8 @@ export default function ProjectGlor() {
         </div>
         <div className={`${styles.projects__content}`}>
           <div className={`${styles.projects__contentDesc}`}>
-            <h2>Glor Website</h2>
-            <p>Cable installations and security company.</p>
+            <h2>{name}</h2>
+            <p>aaaa</p>
           </div>
           <footer className={`${styles.projects__contentFooter}`}>
             <div className={`${styles.projects__contentFooter___pills}`}>
