@@ -8,13 +8,19 @@ import ProjectDZ from "../grid-items/projectsDz";
 
 export default function Grid() {
   return (
-    <div className={styles.grid}>
-      <AboutMe />
-      <ColorTheme />
-      <MyLocation />
-      <ProjectGlor />
-      <ProjectDZ />
-      <Skills />
-    </div>
+    <>
+      <div className={`${styles.grid} ${styles.heroGrid}`}>
+        <AboutMe />
+        <ColorTheme />
+        <MyLocation />
+      </div>
+      <div className={`${styles.grid} ${styles.projectGrid}`} id="projects">
+        <ProjectGlor />
+        <ProjectDZ />
+      </div>
+      <div className={`${styles.grid} ${styles.skillsGrid}`} id="skills">
+        <Skills />
+      </div>
+    </>
   );
 }

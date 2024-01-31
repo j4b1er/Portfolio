@@ -1,0 +1,38 @@
+.simpleBtn {
+  cursor: pointer;
+
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid rgba(18, 18, 18, 01);
+
+  padding: 0 1rem;
+
+  color: #121212;
+  font-size: 1rem;
+
+  border-radius: 10rem;
+
+  height: 2.5rem;
+
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.simpleBtn svg {
+  height: 1rem;
+  fill: #121212;
+  transition: all 0.3s ease-in-out;
+}
+
+.simpleBtn:hover {
+  background-color: #121212;
+  color: #ebebeb;
+}
+
+.simpleBtn:hover svg {
+  fill: #ebebeb;
+}

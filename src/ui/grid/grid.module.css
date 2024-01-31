@@ -1,31 +1,83 @@
 .grid {
   background-color: transparent;
   max-width: var(--max-width);
-  margin: 0 auto;
-  padding: calc(4rem + var(--navbar-height)) 1rem;
 
   display: grid;
   gap: 1rem;
-
   grid-auto-rows: 264px;
+
+  /* margin: 0 auto;
+  padding: calc(4rem + var(--navbar-height)) 1rem;
+
   grid-template-areas:
     "about"
     "about"
     "theme"
     "location"
     "project1"
+    "project1"
     "project2"
+    "project2"
+    "skills"; */
+}
+
+.heroGrid {
+  margin: calc(4rem + var(--navbar-height)) auto 0 auto;
+  padding: 0 1rem;
+  grid-template-areas:
+    "about"
+    "about"
+    "theme"
+    "location";
+}
+
+.projectGrid {
+  scroll-margin-top: calc(var(--navbar-height) + 1rem);
+
+  margin: 1rem auto;
+  padding: 0 1rem;
+  grid-template-areas:
+    "project1"
+    "project1"
+    "project2"
+    "project2";
+}
+
+.skillsGrid {
+  scroll-margin-top: calc(var(--navbar-height) + 1rem);
+
+  margin: 1rem auto;
+  padding: 0 1rem;
+  grid-template-areas:
+    "skills"
     "skills";
 }
 
 @media only screen and (min-width: 600px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .heroGrid {
     grid-template-areas:
       "about about about theme"
-      "about about about location"
+      "about about about location";
+  }
+
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .skillsGrid {
+    grid-template-areas: "skills skills skills skills";
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .projectGrid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
       "project1 project1 project2 project2"
-      "project1 project1 project2 project2"
-      "skills skills skills skills";
+      "project1 project1 project2 project2";
   }
 }
