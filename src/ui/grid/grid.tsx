@@ -17,8 +17,6 @@ export default function Grid() {
         <MyLocation />
       </div>
       <div className={`${styles.grid} ${styles.projectGrid}`} id="projects">
-        {/* <ProjectGlor /> */}
-        {/* <ProjectDZ /> */}
         {PROJECTS_DATA.map((project, i) => (
           <Project ProjectData={project} key={`${i}-${project.id}`} />
         ))}

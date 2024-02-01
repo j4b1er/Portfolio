@@ -380,16 +380,6 @@
   width: 100%;
 }
 
-.projectGlor {
-  grid-area: project1;
-  background-color: #a3e81b;
-}
-
-.projectDz {
-  grid-area: project2;
-  background-color: #fca311;
-}
-
 /* Styles for Skills theme component */
 .skills {
   grid-area: skills;

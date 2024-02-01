@@ -1,7 +1,7 @@
 export const PROJECTS_DATA = [
   {
     id: "01",
-    name: "Gloir",
+    name: "Glor",
     description: "Cable installations and security company.",
     stylesCSS: {
       backgroundColor: "#a3e81b",
@@ -9,7 +9,7 @@ export const PROJECTS_DATA = [
     },
     liveUrl: "#",
     technologies: ["JS", "HTML", "CSS"],
-    sourceUrl: "#",
+    sourceUrl: "https://github.com/j4b1er/glor-site",
     imgScreenShot: "/projects-ss/glor.jpg",
   },
   {
@@ -20,7 +20,7 @@ export const PROJECTS_DATA = [
       backgroundColor: "#FCA311",
       gridArea: "project2",
     },
-    liveUrl: "#",
+    liveUrl: "https://darkzmu.com/",
     technologies: ["JS", "HTML", "CSS", "Bootstrap"],
     sourceUrl: "#",
     imgScreenShot: "/projects-ss/darkzmu.jpg",

@@ -8,7 +8,7 @@ export default function SimpleButton({
   href: string;
 }) {
   return (
-    <a href={href} className={styles.simpleBtn}>
+    <a href={href} className={styles.simpleBtn} target="_blank">
       {children}
     </a>
   );

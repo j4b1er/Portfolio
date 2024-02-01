@@ -9,7 +9,7 @@ export default function AngleButton({
   href: string;
 }) {
   return (
-    <a href={href} className={styles.leftButton}>
+    <a href={href} className={styles.leftButton} target="_blank">
       {children}
     </a>
   );
