@@ -1,7 +1,7 @@
 export const PROJECTS_DATA = [
   {
     id: "01",
-    name: "Gloir Website",
+    name: "Gloir",
     description: "Cable installations and security company.",
     stylesCSS: {
       backgroundColor: "#a3e81b",
@@ -14,7 +14,7 @@ export const PROJECTS_DATA = [
   },
   {
     id: "02",
-    name: "Darkzmu Website",
+    name: "Darkzmu",
     description: "Mu Online game server for South America.",
     stylesCSS: {
       backgroundColor: "#FCA311",
