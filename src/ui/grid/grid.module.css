@@ -4,21 +4,7 @@
 
   display: grid;
   gap: 1rem;
-  grid-auto-rows: 264px;
-
-  /* margin: 0 auto;
-  padding: calc(4rem + var(--navbar-height)) 1rem;
-
-  grid-template-areas:
-    "about"
-    "about"
-    "theme"
-    "location"
-    "project1"
-    "project1"
-    "project2"
-    "project2"
-    "skills"; */
+  /* grid-auto-rows: 264px; */
 }
 
 .heroGrid {
@@ -33,14 +19,10 @@
 
 .projectGrid {
   scroll-margin-top: calc(var(--navbar-height) + 1rem);
+  /* grid-auto-rows: 544px; */
 
   margin: 1rem auto;
   padding: 0 1rem;
-  grid-template-areas:
-    "project1"
-    "project1"
-    "project2"
-    "project2";
 }
 
 .skillsGrid {
@@ -75,9 +57,6 @@
 
 @media only screen and (min-width: 800px) {
   .projectGrid {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-      "project1 project1 project2 project2"
-      "project1 project1 project2 project2";
+    grid-template-columns: repeat(2, 1fr);
   }
 }

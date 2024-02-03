@@ -12,7 +12,7 @@
 
   border-radius: 10rem;
 
-  height: 2.5rem;
+  height: 2.25rem;
 
   display: flex;
   gap: 0.5rem;
@@ -20,10 +20,12 @@
   justify-content: center;
 
   transition: all 0.3s ease-in-out;
+
+  z-index: 2;
 }
 
 .simpleBtn svg {
-  height: 1rem;
+  /* min-height: 0.5rem; */
   fill: #121212;
   transition: all 0.3s ease-in-out;
 }

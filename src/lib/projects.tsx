@@ -4,8 +4,10 @@ export const PROJECTS_DATA = [
     name: "Glor",
     description: "Cable installations and security company.",
     stylesCSS: {
-      backgroundColor: "#a3e81b",
-      gridArea: "project1",
+      backgroundColor: "#A3E81B",
+    },
+    pillsStyleCSS: {
+      color: "#A3E81B",
     },
     liveUrl: "#",
     technologies: ["JS", "HTML", "CSS"],
@@ -18,10 +20,12 @@ export const PROJECTS_DATA = [
     description: "Mu Online game server for South America.",
     stylesCSS: {
       backgroundColor: "#FCA311",
-      gridArea: "project2",
+    },
+    pillsStyleCSS: {
+      color: "#FCA311",
     },
     liveUrl: "https://darkzmu.com/",
-    technologies: ["JS", "HTML", "CSS", "Bootstrap"],
+    technologies: ["JS", "HTML", "CSS", "Bootstrap", "PHP"],
     sourceUrl: "#",
     imgScreenShot: "/projects-ss/darkzmu.jpg",
   },
