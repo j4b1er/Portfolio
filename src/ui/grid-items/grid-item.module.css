@@ -1,6 +1,4 @@
 .gridItem {
-  /* padding: 1rem; */
-
   overflow: hidden;
 
   background-color: rgba(var(--color-primary-100-rgb), 0.1);
@@ -18,7 +16,6 @@
   padding: 1rem;
 
   display: flex;
-  /* gap: 1rem; */
   flex-flow: column nowrap;
   justify-content: space-between;
 }
@@ -298,9 +295,9 @@
 .projects {
   position: relative;
 
-  min-height: 544px;
+  overflow: hidden;
 
-  border: none;
+  min-height: 544px;
 
   display: flex;
   flex-flow: column nowrap;
@@ -382,7 +379,6 @@
 
 .projects__contentFooter___image {
   padding-left: 1rem;
-  overflow: hidden;
 
   max-height: 290px;
 }

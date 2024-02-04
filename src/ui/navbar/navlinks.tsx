@@ -1,4 +1,6 @@
+import Link from "next/link";
 import styles from "./navbar.module.css";
+import { Links } from "@/lib/navlinks";
 
 export default function NavLinks({
   onOpenHandler,
@@ -7,35 +9,16 @@ export default function NavLinks({
 }) {
   return (
     <ul className={styles.mainNavbar__container___ul}>
-      <li>
-        <a href="/" className={styles.mainNavbar__container___link}>
-          Home
-        </a>
-      </li>
-      <li>
-        <a
-          href="#projects"
-          className={styles.mainNavbar__container___link}
-          onClick={onOpenHandler}>
-          Projects
-        </a>
-      </li>
-      <li>
-        <a
-          href="#skills"
-          className={styles.mainNavbar__container___link}
-          onClick={onOpenHandler}>
-          Skills
-        </a>
-      </li>
-      <li>
-        <a
-          href="#"
-          className={styles.mainNavbar__container___link}
-          onClick={onOpenHandler}>
-          More about me
-        </a>
-      </li>
+      {Links.map((link) => (
+        <li key={link.name}>
+          <Link
+            href={link.href}
+            className={styles.mainNavbar__container___link}
+            onClick={onOpenHandler}>
+            {link.name}
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 }
