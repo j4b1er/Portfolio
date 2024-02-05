@@ -32,6 +32,8 @@
 .gridItem__header {
   position: relative;
 
+  background-color: red;
+
   display: flex;
   gap: 1rem;
   align-items: center;

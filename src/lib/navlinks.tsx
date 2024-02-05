@@ -1,4 +1,4 @@
-export const Links = [
+export const LINKS_DATA = [
   {
     name: "Home",
     href: "/",

@@ -60,7 +60,7 @@ html {
 html,
 body {
   max-width: 100vw;
-  min-height: 3000px;
+  /* min-height: 3000px; */
   overflow-x: hidden;
 }
 
@@ -75,6 +75,11 @@ a {
 
 .text-black {
   color: #121212;
+}
+
+.active {
+  background-color: var(--navbar-button-bg-hover);
+  color: var(--button-hover-color) !important;
 }
 
 .componentIcon {
