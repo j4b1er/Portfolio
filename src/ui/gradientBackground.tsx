@@ -1,22 +1,22 @@
 "use client";
 
 import styles from "@/ui/gradientBackground.module.css";
-import { useRef } from "react";
+import { useEffect } from "react";
 
 export default function GradientBackground() {
-  //   function handleMouseEnter(e: React.MouseEvent<HTMLDivElement>) {}
+  useEffect(() => {
+    function handleMouseMove(e: MouseEvent) {
+      const mouseX = e.x;
+      const mouseY = e.y;
+      document.documentElement.style.setProperty("--x-grid", `${mouseX}px`);
+      document.documentElement.style.setProperty("--y-grid", `${mouseY}px`);
+    }
+    document.addEventListener("mousemove", handleMouseMove);
 
-  //   function handleMouseEnter(e: React.MouseEvent<HTMLDivElement>) {
-  //     const mouseX = e.clientX;
-  //     const mouseY = e.clientY;
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
-  //     document.documentElement.style.setProperty("--mouseX", `${mouseX}px`);
-  //     document.documentElement.style.setProperty("--mouseY", `${mouseY}px`);
-  //   }
-
-  return (
-    <div
-      className={styles.homeBackground}
-      onMouseMove={() => console.log("a")}></div>
-  );
+  return <div className={styles.homeBackground}></div>;
 }
