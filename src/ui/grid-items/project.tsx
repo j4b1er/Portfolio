@@ -35,7 +35,7 @@ export default function Project({ ProjectData }: ProjectProps) {
   return (
     <div
       className={`${styles.gridItem} ${styles.projects}`}
-      style={stylesCSS}
+      style={cardHover ? stylesCSS : {}}
       onMouseEnter={() => setCardHover(true)}
       onMouseLeave={() => setCardHover(false)}>
       <a
