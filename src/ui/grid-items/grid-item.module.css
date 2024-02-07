@@ -43,6 +43,8 @@
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 110%;
+
+  transition: all 0.3s ease-in-out;
 }
 
 /* Styles for Select about me component */
@@ -310,6 +312,14 @@
   transition: all 0.3s ease-in-out;
 }
 
+.projects:hover .projects__contentDesc h2 {
+  color: #121212;
+}
+
+.projects:hover .projects__contentDesc p {
+  color: rgba(18, 18, 18, 0.9);
+}
+
 .projects__link {
   position: absolute;
   top: 0;
@@ -334,16 +344,20 @@
 }
 
 .projects__contentDesc h2 {
-  color: #121212;
+  color: var(--color-white);
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 120%;
+
+  transition: all 0.3s ease-in-out;
 }
 
 .projects__contentDesc p {
-  color: rgba(18, 18, 18, 0.9);
+  color: rgba(var(--color-white-rgb), 0.9);
   font-weight: 400;
   font-size: 1rem;
+
+  transition: all 0.3s ease-in-out;
 }
 
 .projects__contentFooter___pills {
