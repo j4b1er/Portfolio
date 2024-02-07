@@ -25,14 +25,14 @@
   height: 100%;
   overflow: hidden;
 
+  padding: 1rem;
+
   display: grid;
   gap: 1rem;
 }
 
 .gridItem__header {
   position: relative;
-
-  background-color: red;
 
   display: flex;
   gap: 1rem;
@@ -400,8 +400,86 @@
   grid-area: skills;
 }
 
+.skillsContainer {
+  grid-template-columns: 30% 70%;
+
+  grid-template-areas:
+    "header gridskills"
+    "power gridskills";
+}
+
+.gridItem__skills___title {
+  grid-area: header;
+  align-self: flex-start;
+}
+
+.gridItem__skills___powerName {
+  grid-area: power;
+  align-self: flex-end;
+
+  font-size: 3rem;
+  font-weight: 300;
+
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.gridItem__skills___powerName span {
+  font-weight: 500;
+}
+
+.gridItem__skills___gridContainer {
+  grid-area: gridskills;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gridItem__skills___grid {
+  list-style: none;
+
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(13, minmax(0, 1fr));
+}
+
+.gridItem__skills___gridItem {
+  grid-column: span 2 / span 2;
+
+  cursor: pointer;
+
+  height: 80px;
+  width: 80px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(var(--color-white-rgb), 0.1);
+  border: 1px solid rgba(var(--color-white-rgb), 0.1);
+  border-radius: 100rem;
+
+  transition: all 0.1s;
+}
+
+.gridItem__skills___gridItem svg {
+  width: 40px;
+}
+
+.gridItem__skills___gridItem:nth-child(1),
+.gridItem__skills___gridItem:nth-child(13) {
+  grid-column-start: 2;
+}
+
 @media only screen and (min-width: 600px) {
   .flexContainer {
+    padding: 2rem;
+  }
+
+  .gridContainer {
     padding: 2rem;
   }
 
@@ -412,4 +490,12 @@
 
 .animationSvgAngle {
   animation: angle-translate 0.3s ease-in-out;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .gridItem__skills___gridItem:hover {
+    transform: scale(1.3);
+    background-color: var(--color-primary-300);
+  }
 }
