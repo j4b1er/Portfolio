@@ -111,8 +111,8 @@ export const DEV_ICONS = [
         preserveAspectRatio="xMidYMid">
         <defs>
           <linearGradient x1="-2.778%" y1="32%" x2="100%" y2="67.556%" id="a">
-            <stop stop-color="#2298BD" offset="0%" />
-            <stop stop-color="#0ED7B5" offset="100%" />
+            <stop stopColor="#2298BD" offset="0%" />
+            <stop stopColor="#0ED7B5" offset="100%" />
           </linearGradient>
         </defs>
         <path
@@ -136,12 +136,12 @@ export const DEV_ICONS = [
             x2="83.228%"
             y1="56.385%"
             y2="96.08%">
-            <stop offset="0%" stop-color="#FFF" />
-            <stop offset="100%" stop-color="#FFF" stop-opacity="0" />
+            <stop offset="0%" stopColor="#FFF" />
+            <stop offset="100%" stopColor="#FFF" stopOpacity="0" />
           </linearGradient>
           <linearGradient id="d" x1="50%" x2="49.953%" y1="0%" y2="73.438%">
-            <stop offset="0%" stop-color="#FFF" />
-            <stop offset="100%" stop-color="#FFF" stop-opacity="0" />
+            <stop offset="0%" stopColor="#FFF" />
+            <stop offset="100%" stopColor="#FFF" stopOpacity="0" />
           </linearGradient>
           <circle id="a" cx="128" cy="128" r="128" />
         </defs>
