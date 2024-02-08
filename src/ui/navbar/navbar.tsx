@@ -12,9 +12,9 @@ import { useState } from "react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const setOpenHandler = () => {
+  function setOpenHandler() {
     setIsOpen((value) => !value);
-  };
+  }
 
   return (
     // <nav className={`${styles.mainNavbar} ${roboto.variable}`}>

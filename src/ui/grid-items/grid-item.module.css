@@ -423,6 +423,8 @@
 
 @media only screen and (min-width: 800px) {
   .skillsContainer {
+    grid-template-columns: 30% 70%;
+
     grid-template-areas:
       "header gridskills"
       "power gridskills";
@@ -437,6 +439,8 @@
 .gridItem__skills___powerName {
   grid-area: power;
   align-self: flex-end;
+
+  /* min-width: 330px; */
 
   font-size: 3rem;
   font-weight: 300;

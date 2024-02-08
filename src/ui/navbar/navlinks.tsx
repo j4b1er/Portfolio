@@ -21,7 +21,7 @@ export default function NavLinks({
           <Link
             href={link.href}
             className={styles.mainNavbar__container___link}
-            onClick={() => onOpenHandler}>
+            onClick={onOpenHandler}>
             {link.name}
           </Link>
         </li>
