@@ -1,0 +1,38 @@
+.anchorGeneral {
+  position: relative;
+  align-self: flex-end;
+
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-end;
+
+  color: var(--color-white);
+
+  z-index: 2;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.anchorGeneral:hover::after {
+  width: 100%;
+}
+
+.anchorGeneral::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #121212;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.anchorGeneral svg {
+  fill: var(--color-white);
+  height: 1rem;
+
+  transition: all 0.3s ease-in-out;
+}

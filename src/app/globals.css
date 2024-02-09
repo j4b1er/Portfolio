@@ -77,7 +77,11 @@ a {
 }
 
 .text-black {
-  color: #121212;
+  color: #121212 !important;
+}
+
+.fill-black {
+  fill: #121212 !important;
 }
 
 .active {
