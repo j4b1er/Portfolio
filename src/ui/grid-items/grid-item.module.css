@@ -513,15 +513,15 @@
 
 @media only screen and (min-width: 600px) {
   .flexContainer {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .gridContainer {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .projects__contentFooter___image {
-    padding-left: 2rem;
+    padding-left: 1.5rem;
   }
 }
 
@@ -538,43 +538,4 @@
 }
 
 @media only screen and (min-width: 900px) {
-}
-
-.anchorGeneral {
-  position: relative;
-  align-self: flex-end;
-
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  justify-content: flex-end;
-
-  color: var(--color-white);
-
-  z-index: 2;
-}
-
-.anchorGeneral:hover {
-  color: #121212;
-}
-
-.anchorGeneral:hover::after {
-  width: 100%;
-}
-
-.anchorGeneral::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  height: 2px;
-  width: 0%;
-  background-color: var(--color-white);
-
-  transition: all 0.2s ease-in-out;
-}
-
-.anchorGeneral svg {
-  fill: var(--color-white);
-  height: 1rem;
 }

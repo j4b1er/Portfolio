@@ -7,7 +7,6 @@
   background-color: var(--navbar-background-color);
   backdrop-filter: blur(10px);
 
-  /* font-family: var(--font-roboto); */
   z-index: 9999;
 }
 

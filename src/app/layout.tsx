@@ -3,6 +3,7 @@ import { roboto } from "@/ui/fonts";
 import "./globals.css";
 import Navbar from "@/ui/navbar/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
+import Footer from "@/ui/footer/footer";
 
 export const metadata: Metadata = {
   title: "Javier Pardo",
@@ -25,6 +26,9 @@ export default function RootLayout({
             <Navbar />
           </header>
           {children}
+          <footer>
+            <Footer />
+          </footer>
         </ThemeProvider>
       </body>
     </html>
