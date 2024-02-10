@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/ui/navbar/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/ui/footer/footer";
+import Button from "@/ui/buttons/button";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Javier Pardo",
@@ -12,9 +14,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+  chat,
+}: {
   children: React.ReactNode;
-}>) {
+  chat: React.ReactNode;
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={roboto.className}>
@@ -23,7 +27,11 @@ export default function RootLayout({
           attribute="data-theme"
           disableTransitionOnChange>
           <header>
-            <Navbar />
+            <Navbar>
+              <Button href={"#"} chatChildren={chat}>
+                <span>Let&lsquo;s chat</span>
+              </Button>
+            </Navbar>
           </header>
           {children}
           <footer>

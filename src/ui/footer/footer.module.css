@@ -2,7 +2,7 @@
   width: 100%;
   border-top: 1px solid rgba(var(--color-white-rgb), 0.1);
 
-  margin-top: 2rem;
+  margin-top: 4rem;
   z-index: 100;
 }
 
@@ -37,5 +37,5 @@
 .footer__network svg {
   height: 1.5rem;
   fill: var(--color-white);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }

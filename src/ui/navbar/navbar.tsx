@@ -9,7 +9,7 @@ import MobileDropdown from "./mobilemenu";
 import Hammburger from "./hamburger";
 import { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
   function setOpenHandler() {
@@ -17,15 +17,15 @@ export default function Navbar() {
   }
 
   return (
-    // <nav className={`${styles.mainNavbar} ${roboto.variable}`}>
     <nav className={styles.mainNavbar}>
       <div className={styles.mainNavbar__container}>
         <Logo />
         <div className={styles.mainNavbar__desktopNavbar}>
           <NavLinks />
-          <Button href={"#"}>
-            <span>Contact</span>
-          </Button>
+          {children}
+          {/* <Button href={"#"}>
+            <span>Let&lsquo;s chat</span>
+          </Button> */}
         </div>
         <Hammburger onOpenHandler={setOpenHandler} isOpen={isOpen} />
       </div>
