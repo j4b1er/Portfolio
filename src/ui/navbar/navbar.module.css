@@ -1,5 +1,7 @@
 .mainNavbar {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: var(--navbar-height);
   border-bottom: 1px solid rgba(var(--color-white-rgb), 0.1);
@@ -8,6 +10,8 @@
   backdrop-filter: blur(10px);
 
   z-index: 9999;
+
+  scrollbar-gutter: stable;
 }
 
 .mainNavbar:has([data-visible="true"]) {

@@ -7,7 +7,10 @@
 
   padding: 1rem;
 
-  background-color: red;
+  border: 1px solid rgba(var(--color-white-rgb), 0.1);
+  border-top: none;
 
-  border-radius: 1rem;
+  background-color: var(--color-black);
+
+  border-radius: 0 0 1rem 1rem;
 }

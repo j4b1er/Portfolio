@@ -28,9 +28,9 @@ export default function RootLayout({
           disableTransitionOnChange>
           <header>
             <Navbar>
-              <Button href={"#"} chatChildren={chat}>
-                <span>Let&lsquo;s chat</span>
-              </Button>
+              <Button href={"#"} chatChildren={chat} />
+              {/* <span>Chat</span>
+              </Button> */}
             </Navbar>
           </header>
           {children}
