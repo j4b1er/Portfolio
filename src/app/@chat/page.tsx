@@ -1,3 +1,5 @@
+import styles from "@/app/@chat/page.module.css";
+
 export default function Page() {
-  return <div>Chat Modal</div>;
+  return <div className={styles.chat}>Chat Modal</div>;
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./button.module.css";
 
 export default function Button({
@@ -13,6 +13,13 @@ export default function Button({
   chatChildren: React.ReactNode;
 }) {
   const [chatOpen, setChatOpen] = useState(false);
+
+  // useEffect(() => {
+  //   document.addEventListener("click", (e) => {
+  //     if (!e.target.closest(".modal")) {
+  //     }
+  //   });
+  // }, []);
 
   function handleChatOpen(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     e.preventDefault();
