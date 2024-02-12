@@ -13,13 +13,18 @@ export default function Button({
   chatChildren: React.ReactNode;
 }) {
   const [chatOpen, setChatOpen] = useState(false);
+  const [chatMounted, setChatMounted] = useState(false);
   const spanContent = chatOpen ? "Close chat" : "Open chat";
 
   useEffect(() => {
+    console.log("go");
+    const chat = document.querySelector("#chat");
     if (chatOpen) {
-      const chat = document.querySelector("#chat");
-      console.log(chat);
-      chat?.classList.add(".chat__slideAnimation");
+      setChatMounted(true);
+      chat?.classList.add("chat-animation");
+      chat?.addEventListener("animationend", () => {
+        chat?.classList.remove("chat-animation");
+      });
 
       const handleClickOutside = (e: MouseEvent) => {
         const target = e.target as Element;
@@ -32,8 +37,13 @@ export default function Button({
       return () => {
         document.removeEventListener("click", handleClickOutside);
       };
+    } else {
+      chat?.classList.add("chat-animation-out");
+      chat?.addEventListener("animationend", () => {
+        setChatMounted(false);
+      });
     }
-  }, [chatOpen, setChatOpen]);
+  }, [chatOpen, setChatOpen, chatMounted, setChatMounted]);
 
   function handleChatOpen(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     e.preventDefault();
@@ -45,7 +55,7 @@ export default function Button({
       <a href={href} className={styles.btn} onClick={handleChatOpen}>
         <span>{spanContent}</span>
       </a>
-      {chatOpen && chatChildren}
+      {chatMounted && chatChildren}
     </>
   );
 }

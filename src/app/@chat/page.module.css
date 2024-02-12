@@ -6,7 +6,6 @@
   width: 320px;
 
   padding: 1rem;
-  opacity: 1;
 
   border: 1px solid rgba(var(--color-white-rgb), 0.1);
   border-top: none;
@@ -14,18 +13,43 @@
   background-color: var(--color-black);
 
   border-radius: 0 0 1rem 1rem;
-
-  animation: chat-slide 0.2s;
 }
 
-@keyframes chat-slide {
+.chat:global(.chat-animation) {
+  animation: chat-slide-in 0.2s ease-in;
+}
+
+.chat:global(.chat-animation-out) {
+  animation: chat-slide-out 0.2s ease-out forwards;
+}
+
+@keyframes chat-slide-in {
   0% {
     opacity: 0;
+    transform-origin: top;
     transform: scale(0.9);
+    visibility: hidden;
   }
 
   100% {
     opacity: 1;
+    transform-origin: top;
     transform: scale(1);
+    visibility: visible;
+  }
+}
+
+@keyframes chat-slide-out {
+  0% {
+    opacity: 1;
+    transform-origin: top;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform-origin: top;
+    transform: scale(0.9);
+    visibility: hidden;
   }
 }
