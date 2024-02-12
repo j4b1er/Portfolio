@@ -17,6 +17,10 @@ export default function Button({
 
   useEffect(() => {
     if (chatOpen) {
+      const chat = document.querySelector("#chat");
+      console.log(chat);
+      chat?.classList.add(".chat__slideAnimation");
+
       const handleClickOutside = (e: MouseEvent) => {
         const target = e.target as Element;
         if (!target.closest("#chat")) {
