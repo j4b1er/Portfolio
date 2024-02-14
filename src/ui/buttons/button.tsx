@@ -3,21 +3,20 @@
 import { useEffect, useState } from "react";
 import styles from "./button.module.css";
 
-export default function Button({
+export default function ChatButton({
   // children,
-  href,
+  // href,
   chatChildren,
 }: {
   // children: React.ReactNode;
-  href: string;
+  // href: string;
   chatChildren: React.ReactNode;
 }) {
   const [chatOpen, setChatOpen] = useState(false);
   const [chatMounted, setChatMounted] = useState(false);
-  const spanContent = chatOpen ? "Close chat" : "Open chat";
+  const spanContent = chatOpen ? "Close chat" : "Let's chat";
 
   useEffect(() => {
-    console.log("go");
     const chat = document.querySelector("#chat");
     if (chatOpen) {
       setChatMounted(true);
@@ -45,16 +44,17 @@ export default function Button({
     }
   }, [chatOpen, setChatOpen, chatMounted, setChatMounted]);
 
-  function handleChatOpen(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
+  // function handleChatOpen(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
+  function handleChatOpen(e: React.FormEvent<HTMLButtonElement>) {
     e.preventDefault();
     setChatOpen((status) => !status);
   }
 
   return (
     <>
-      <a href={href} className={styles.btn} onClick={handleChatOpen}>
+      <button className={styles.btn} onClick={handleChatOpen}>
         <span>{spanContent}</span>
-      </a>
+      </button>
       {chatMounted && chatChildren}
     </>
   );

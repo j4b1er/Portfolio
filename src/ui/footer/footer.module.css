@@ -9,7 +9,7 @@
 .footerContainer {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
 
   display: flex;
   flex-wrap: wrap;
@@ -38,4 +38,10 @@
   height: 1.5rem;
   fill: var(--color-white);
   transition: all 0.2s ease-in-out;
+}
+
+@media only screen and (min-width: 600px) {
+  .footerContainer {
+    padding: 4rem 1rem;
+  }
 }

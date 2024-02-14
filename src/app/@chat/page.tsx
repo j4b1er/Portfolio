@@ -1,9 +1,9 @@
 import styles from "@/app/@chat/page.module.css";
 
-export default function Page() {
+export default function ChatPage() {
   return (
     <div className={`${styles.chat}`} id="chat">
-      Chat Modal
+      Ask me a question
     </div>
   );
 }

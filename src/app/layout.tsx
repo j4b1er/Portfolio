@@ -4,8 +4,7 @@ import "./globals.css";
 import Navbar from "@/ui/navbar/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/ui/footer/footer";
-import Button from "@/ui/buttons/button";
-import Link from "next/link";
+import ChatButton from "@/ui/buttons/button";
 
 export const metadata: Metadata = {
   title: "Javier Pardo",
@@ -27,11 +26,8 @@ export default function RootLayout({
           attribute="data-theme"
           disableTransitionOnChange>
           <header>
-            <Navbar>
-              <Button href={"#"} chatChildren={chat} />
-              {/* <span>Chat</span>
-              </Button> */}
-            </Navbar>
+            <Navbar />
+            {/* <Navbar><ChatButton chatChildren={chat} /></Navbar> */}
           </header>
           {children}
           <footer>
