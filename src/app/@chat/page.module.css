@@ -1,4 +1,4 @@
-.chat {
+/* .chat {
   position: absolute;
   top: var(--navbar-height);
   right: 1rem;
@@ -52,4 +52,36 @@
     transform: scale(0.9);
     visibility: hidden;
   }
+} */
+
+.chat {
+  cursor: pointer;
+
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: 18rem;
+  height: 3rem;
+
+  padding: 0 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 0.5rem;
+  border: 1px solid rgba(var(--color-white-rgb), 0.1);
+
+  background-color: var(--color-primary-300);
+}
+
+.chat span {
+  color: #121212;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.chat svg {
+  fill: #121212;
+  width: 0.75rem;
 }

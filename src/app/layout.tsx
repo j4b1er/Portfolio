@@ -30,6 +30,7 @@ export default function RootLayout({
             {/* <Navbar><ChatButton chatChildren={chat} /></Navbar> */}
           </header>
           {children}
+          {chat}
           <footer>
             <Footer />
           </footer>
