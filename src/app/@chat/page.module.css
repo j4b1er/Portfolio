@@ -61,6 +61,8 @@
   width: 20rem;
 
   border-radius: 0.5rem;
+
+  overflow: hidden;
 }
 
 .chat__header {
@@ -75,6 +77,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  transition: all 0.2s 0.1s;
 }
 
 .halfRoundedCorners {
@@ -104,8 +108,9 @@
   border-radius: 0 0 0.5rem 0.5rem;
   border: 1px solid rgba(var(--color-white-rgb), 0.1);
 
-  height: 400px;
+  max-height: 400px;
   background-color: var(--color-black);
+  overflow-y: scroll;
 }
 
 .showChat {
@@ -113,7 +118,7 @@
 }
 
 .hideChat {
-  animation: hideChat 0.2s ease-in forwards;
+  animation: hideChat 0.2s ease-out forwards;
 }
 
 @keyframes showChat {
@@ -123,14 +128,14 @@
   }
 
   100% {
-    height: 400px;
+    height: 100%;
     opacity: 1;
   }
 }
 
 @keyframes hideChat {
   0% {
-    height: 400px;
+    height: 100%;
     opacity: 1;
   }
 
