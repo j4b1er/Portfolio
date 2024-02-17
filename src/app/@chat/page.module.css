@@ -111,19 +111,20 @@
   max-height: 400px;
   background-color: var(--color-black);
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .showChat {
-  animation: showChat 0.2s ease-in forwards;
+  animation: showChat 0.1s ease-in forwards;
 }
 
 .hideChat {
-  animation: hideChat 0.2s ease-out forwards;
+  animation: hideChat 0.1s ease-out forwards;
 }
 
 @keyframes showChat {
   0% {
-    height: 0px;
+    height: 0%;
     opacity: 0;
   }
 
@@ -135,7 +136,7 @@
 
 @keyframes hideChat {
   0% {
-    height: 100%;
+    height: 400px;
     opacity: 1;
   }
 
