@@ -7,7 +7,7 @@
 }
 
 .chat {
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 
   overflow: hidden;
 }
@@ -15,9 +15,8 @@
 .chat__header {
   cursor: pointer;
   background-color: var(--color-primary-300);
-  border-radius: 0.5rem;
 
-  height: 3.5rem;
+  height: 3rem;
 
   padding: 0 1rem;
 
@@ -38,11 +37,21 @@
 
 .chat__header span {
   color: #121212;
-  font-weight: 400;
-  font-size: 1.125rem;
+  font-weight: 500;
+  font-size: 1rem;
+
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.chat__header svg {
+.chat__header span svg {
+  height: 1rem;
+  fill: #121212;
+}
+
+.chat__header > svg {
   fill: #121212;
   width: 0.75rem;
   transform-origin: center center;
@@ -52,7 +61,7 @@
 .chat__body {
   background-color: var(--color-black);
 
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0 1rem 1rem;
   border: 1px solid rgba(var(--color-white-rgb), 0.2);
 
   min-height: 400px;
@@ -82,6 +91,9 @@
   align-self: flex-start;
 
   background-color: rgba(var(--color-white-rgb), 0.2);
+  /* background-color: rgba(var(--color-primary-100-rgb), 0.2); */
+  backdrop-filter: blur(16px);
+
   border-radius: 0.5rem 0.5rem 0.5rem 0;
 
   padding: 0.5rem;
@@ -95,6 +107,9 @@
   align-self: flex-end;
 
   background-color: rgba(var(--color-white-rgb), 0.3);
+  /* background-color: rgba(var(--color-primary-100-rgb), 0.1); */
+  backdrop-filter: blur(16px);
+
   border-radius: 0.5rem 0.5rem 0 0.5rem;
 
   padding: 0.5rem;
@@ -107,7 +122,7 @@
 .chat__body___footer {
   border-top: 1px solid rgba(var(--color-white-rgb), 0.2);
 
-  height: 3.5rem;
+  height: 3.25rem;
   padding: 0 1rem;
 
   display: flex;
