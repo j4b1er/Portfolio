@@ -51,6 +51,24 @@
 .aboutMe {
   grid-area: about;
   height: 544px;
+
+  overflow: hidden;
+}
+
+.aboutMe__content {
+  display: flex;
+  gap: 1rem;
+  flex-flow: column nowrap;
+}
+
+.aboutMe__content h1 {
+  font-weight: 500;
+  font-size: 4rem;
+}
+
+.aboutMe__content p {
+  max-width: 21rem;
+  text-wrap: pretty;
 }
 
 /* Styles for Select theme component */
