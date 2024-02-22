@@ -71,6 +71,11 @@
   text-wrap: pretty;
 }
 
+.aboutMe__content___buttons {
+  display: flex;
+  gap: 1rem;
+}
+
 /* Styles for Select theme component */
 .colorTheme {
   grid-area: theme;

@@ -1,14 +1,12 @@
 .btn {
   position: relative;
   overflow: hidden;
-  cursor: pointer;
+  display: inline-block;
 
   text-decoration: none;
   padding: 0.5rem 1rem;
 
-  font-family: var(--font-roboto);
-
-  background-color: transparent;
+  background-color: var(--color-primary-100);
   color: var(--color-white);
 
   border-radius: 10rem;
@@ -19,10 +17,20 @@
 
 .btn span {
   position: relative;
-  display: block;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 
   font-size: 1rem;
   line-height: 1.25rem;
+  color: #121212;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.btn span svg {
+  height: 1rem;
+  fill: #121212;
 
   transition: all 0.2s ease-in-out;
 }
@@ -35,6 +43,10 @@
 
   .btn:hover span {
     animation: btn-span-translate 0.3s ease-in-out;
+  }
+
+  .btn:hover span svg {
+    fill: #121212;
   }
 
   .btn:hover::before {
@@ -61,37 +73,37 @@
 @keyframes btn-span-translate {
   0% {
     transform: translateX(0);
-    color: var(--color-white);
+    /* color: var(--color-white); */
     opacity: 1;
   }
 
   45% {
     transform: translateX(150%);
-    color: var(--color-white);
+    /* color: var(--color-white); */
     opacity: 1;
   }
 
   46% {
     transform: translateX(150%);
-    color: var(--color-white);
+    /* color: var(--color-white); */
     opacity: 0;
   }
 
   54% {
     transform: translateX(-150%);
-    color: #121212;
+    /* color: #121212; */
     opacity: 0;
   }
 
   55% {
     transform: translateX(-150%);
-    color: #121212;
+    /* color: #121212; */
     opacity: 1;
   }
 
   100% {
     transform: translateX(0);
-    color: #121212;
+    /* color: #121212; */
     opacity: 1;
   }
 }
