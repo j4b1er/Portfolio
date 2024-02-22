@@ -7,6 +7,16 @@ import { useTheme } from "next-themes";
 export default function ColorTheme() {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
+
+  useEffect(() => {
+    if (theme === "system") {
+      const systemTheme = document
+        .querySelector("html")
+        ?.getAttribute("data-theme");
+      systemTheme === "dark" ? setTheme("dark") : setTheme("light");
+    }
+  }, [theme, setTheme]);
 
   useEffect(() => {
     setMounted(true);
