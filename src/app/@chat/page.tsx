@@ -2,10 +2,25 @@
 
 import styles from "@/app/@chat/page.module.css";
 import { useEffect, useRef, useState } from "react";
+import { sendQuestion } from "./actions";
+
+interface Message {
+  id: string;
+  text: string;
+  owner: "user" | "bot";
+}
 
 export default function ChatPage() {
   const [chatOpen, setChatOpen] = useState(false);
   const [chatMount, setChatMount] = useState(false);
+  const [messages, setMessages] = useState<Message[]>([
+    {
+      id: "1",
+      text: "Hello! Ask me a question.",
+      owner: "bot",
+    },
+  ]);
+  // const [isLoading, setIsLoading]
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -24,6 +39,26 @@ export default function ChatPage() {
 
   function handleAnimation(e: React.AnimationEvent<HTMLDivElement>) {
     if (!chatOpen) setChatMount(false);
+  }
+
+  async function handleSubmit(formData: FormData) {
+    setMessages((messages) =>
+      messages.concat({
+        id: Math.random().toString(36).slice(2),
+        text: formData.get("question") as string,
+        owner: "user",
+      })
+    );
+
+    const answer = await sendQuestion(formData.get("question") as string);
+
+    setMessages((messages) =>
+      messages.concat({
+        id: Math.random().toString(36).slice(2),
+        text: answer,
+        owner: "bot",
+      })
+    );
   }
 
   return (
@@ -54,21 +89,24 @@ export default function ChatPage() {
             }`}
             onAnimationEnd={handleAnimation}>
             <div className={styles.chat__body___content} ref={contentRef}>
-              <div className={styles.chat__body___contentResponse}>Hello</div>
-              <div className={styles.chat__body___contentQuestion}>Hi</div>
-              <div className={styles.chat__body___contentResponse}>
-                How are you?
-              </div>
-              <div className={styles.chat__body___contentQuestion}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Faucibus turpis in eu mi bibendum neque egestas. Rhoncus dolor
-                purus non enim praesent elementum. Scelerisque felis imperdiet
-                proin fermentum leo vel.
-              </div>
+              {messages.map((message) => (
+                <div
+                  key={message.id}
+                  className={`${
+                    message.owner === "bot"
+                      ? styles.chat__body___contentResponse
+                      : styles.chat__body___contentQuestion
+                  }`}>
+                  {message.text}
+                </div>
+              ))}
             </div>
-            <form className={styles.chat__body___footer}>
-              <input type="text" placeholder="Ask me a question..." />
+            <form className={styles.chat__body___footer} action={handleSubmit}>
+              <input
+                type="text"
+                name="question"
+                placeholder="Ask me a question..."
+              />
               <button>
                 <span className="sr-only">Send</span>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
