@@ -122,7 +122,7 @@
 .chat__body___footer {
   border-top: 1px solid rgba(var(--color-white-rgb), 0.2);
 
-  height: 3.25rem;
+  min-height: 3.25rem;
   padding: 0 1rem;
 
   display: flex;
@@ -153,22 +153,21 @@
 .chat__body___footer button {
   cursor: pointer;
   border: none;
-
-  /* font-family: var(--roboto); */
-  /* font-size: 1rem; */
-
-  /* padding: 0.5rem 0.75rem; */
-  /* border-radius: 0.5rem; */
-
-  /* border: 1px solid rgba(var(--color-white-rgb), 0.1); */
   background-color: transparent;
 
   display: flex;
-  /* gap: 0.5rem; */
   align-items: center;
   justify-content: center;
 
   transition: all 0.2s;
+}
+
+.chat__body___footer button:disabled {
+  cursor: initial;
+}
+
+.chat__body___footer button:disabled svg {
+  opacity: 0.4;
 }
 
 .chat__body___footer button svg {
