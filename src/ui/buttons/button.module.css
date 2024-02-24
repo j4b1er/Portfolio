@@ -6,11 +6,12 @@
   text-decoration: none;
   padding: 0.5rem 1rem;
 
-  background-color: var(--color-primary-100);
-  color: var(--color-white);
+  background-color: rgba(var(--color-white-rgb), 0.2);
+  /* background-color: var(--color-primary-100); */
 
   border-radius: 10rem;
   border: 1px solid rgba(var(--color-white-rgb), 0.1);
+  /* outline: 1px solid rgba(var(--color-white-rgb), 0.1); */
 
   transition: all 0.2s ease-in-out;
 }
@@ -23,14 +24,14 @@
 
   font-size: 1rem;
   line-height: 1.25rem;
-  color: #121212;
+  color: var(--color-white);
 
   transition: all 0.2s ease-in-out;
 }
 
 .btn span svg {
   height: 1rem;
-  fill: #121212;
+  fill: var(--color-white);
 
   transition: all 0.2s ease-in-out;
 }
@@ -42,6 +43,7 @@
   }
 
   .btn:hover span {
+    color: #121212;
     animation: btn-span-translate 0.3s ease-in-out;
   }
 

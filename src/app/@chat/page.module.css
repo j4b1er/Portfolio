@@ -106,8 +106,8 @@
 .chat__body___contentQuestion {
   align-self: flex-end;
 
-  background-color: rgba(var(--color-white-rgb), 0.3);
-  /* background-color: rgba(var(--color-primary-100-rgb), 0.1); */
+  /* background-color: rgba(var(--color-white-rgb), 0.3); */
+  background-color: rgba(var(--color-white-rgb), 1);
   backdrop-filter: blur(16px);
 
   border-radius: 0.5rem 0.5rem 0 0.5rem;
@@ -115,6 +115,7 @@
   padding: 0.5rem;
   margin-left: 2rem;
 
+  color: var(--color-black);
   font-size: 1rem;
   text-wrap: pretty;
 }
@@ -179,11 +180,6 @@
 .chat__body___footer button:focus {
   outline: none;
 }
-
-/* .chat__body___footer button:hover svg,
-.chat__body___footer button:focus svg {
-  fill: #121212;
-} */
 
 /* animations */
 .showChat {
