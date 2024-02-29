@@ -42,22 +42,24 @@ export default function ChatPage() {
     if (!chatOpen) setChatMount(false);
   }
 
+  // async function handleSubmit(e: React.ChangeEvent<HTMLFormElement>) {
   async function handleSubmit(e: React.ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    const formData = new FormData(e.target);
+    // const formData = new FormData(e.target);
 
     setIsLoading(true);
     setQuestion("");
     setMessages((messages) =>
       messages.concat({
         id: Math.random().toString(36).slice(2),
-        text: formData.get("question") as string,
+        // text: formData.get("question") as string,
+        text: question,
         owner: "user",
       })
     );
 
-    const answer = await sendQuestion(formData.get("question") as string);
+    const answer = await sendQuestion(question);
 
     setIsLoading(false);
     setMessages((messages) =>
@@ -108,6 +110,14 @@ export default function ChatPage() {
                   {message.text}
                 </div>
               ))}
+              {isLoading && (
+                <div
+                  className={`${styles.chat__body___contentResponse} ${styles.chat__body___loadingResponse} `}>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              )}
             </div>
             <form
               className={styles.chat__body___footer}
