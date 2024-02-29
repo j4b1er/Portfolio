@@ -11,8 +11,4 @@ export const LINKS_DATA = [
     name: "Skills",
     href: "#skills",
   },
-  {
-    name: "About me",
-    href: "#about",
-  },
 ];
