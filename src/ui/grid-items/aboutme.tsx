@@ -16,7 +16,7 @@ export default function AboutMe() {
         <div className={styles.aboutMe__content}>
           <h1>Javier Pardo</h1>
           <p>
-            I&apos;m a frontend developer in love of technology, coding and
+            I&apos;m a front-end developer in love of technology, coding and
             beautiful designs.
           </p>
           <div className={styles.aboutMe__content___buttons}>
