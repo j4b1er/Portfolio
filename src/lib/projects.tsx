@@ -9,7 +9,7 @@ export const PROJECTS_DATA = [
     pillsStyleCSS: {
       color: "#A3E81B",
     },
-    liveUrl: "#",
+    liveUrl: "https://glor-site.vercel.app/",
     technologies: ["Javascript", "HTML", "SASS"],
     sourceUrl: "https://github.com/j4b1er/glor-site",
     imgScreenShot: "/projects-ss/glor.jpg",
